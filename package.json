@@ -2,7 +2,7 @@
   "name": "kiss",
   "version": "0.0.0",
   "description": "Keeping track of all the beer I drink",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,5 +12,10 @@
     "grunt": "~0.4.1",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-sass": "~0.6.1"
+  },
+  "dependencies": {
+    "when": "~2.4.0",
+    "then-redis": "~0.3.8",
+    "express": "~3.4.0"
   }
 }

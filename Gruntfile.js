@@ -8,19 +8,19 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 files: {
-                    'app/css/main.css': 'app/sass/main.scss'
+                    'cordova/www/css/main.css': 'cordova/www/sass/main.scss'
                 }
             }
         },
         watch: {
             sass: {
-                files: ['app/sass/*.scss'],
+                files: ['cordova/www/sass/*.scss'],
                 tasks: ['sass']
             },
         
             live: {
                 options: { livereload: true },
-                files: ['app/**/*','!app/sass/*.scss']
+                files: ['cordova/www/app.js','cordova/www/**/*','!cordova/www/sass/*.scss']
             }
         }
     });

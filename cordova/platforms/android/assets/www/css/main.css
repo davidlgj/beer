@@ -1,0 +1,79 @@
+/* palette http://www.colourlovers.com/palette/3054028/2_89_00 */
+body, html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #465059;
+  color: #fefefe;
+  font-family: "robotolight";
+  font-size: 22px; }
+
+form {
+  padding: 20px; }
+  form input[type="text"], form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px 4px; }
+  form .rating {
+    height: 64px; }
+    form .rating span {
+      height: 64px;
+      width: 64px;
+      display: inline-block; }
+      form .rating span i {
+        margin: 0px;
+        margin-top: 25px;
+        margin-left: 25px; }
+
+label, input {
+  font-size: 22px; }
+
+.day {
+  padding: 10px; }
+  .day ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px; }
+    .day ul li {
+      height: 32px; }
+      .day ul li div, .day ul li span {
+        display: inline-block; }
+      .day ul li .rating {
+        margin-right: 10px;
+        width: 70px; }
+        .day ul li .rating i {
+          margin-right: 0px; }
+
+.today {
+  background-color: #465059;
+  color: #fefefe; }
+
+.day-0 {
+  background-color: #2db585;
+  color: #fefefe; }
+
+.day-1 {
+  background-color: #ff05a3;
+  color: #333333; }
+  .day-1 .rating .star {
+    background-color: #2db585; }
+
+.day-2 {
+  background-color: #305373;
+  color: #fefefe; }
+
+.day-3 {
+  background-color: #ffc6d6;
+  color: #333333; }
+
+.rating {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .rating i {
+    margin-right: 30px;
+    vertical-align: baseline; }
+  .rating .star {
+    background-color: #ff05a3; }

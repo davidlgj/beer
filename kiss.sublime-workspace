@@ -4,6 +4,66 @@
 		"selected_items":
 		[
 			[
+				"webkit-tran",
+				"webkit-transition"
+			],
+			[
+				"webkit-tra",
+				"webkit-transition"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"add",
+				"addToModel"
+			],
+			[
+				"remo",
+				"removeFromDay"
+			],
+			[
+				"tim",
+				"timestamp"
+			],
+			[
+				"len",
+				"len"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"re",
+				"require"
+			],
+			[
+				"no",
+				"none"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"ff",
+				"ffc6d6"
+			],
+			[
+				"touch",
+				"touchend"
+			],
+			[
+				"text",
+				"textarea	Tag"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
 				"sto",
 				"storyId"
 			],
@@ -131,11 +191,67 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "Gruntfile.js",
+			"settings":
+			{
+				"buffer_size": 687,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app.js",
+			"settings":
+			{
+				"buffer_size": 2007,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cordova/www/index.html",
+			"settings":
+			{
+				"buffer_size": 3999,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cordova/www/sass/main.scss",
+			"settings":
+			{
+				"buffer_size": 2987,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cordova/www/js/model.js",
+			"settings":
+			{
+				"buffer_size": 3225,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cordova/www/js/backend.js",
+			"settings":
+			{
+				"buffer_size": 952,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cordova/www/js/main.js",
+			"settings":
+			{
+				"buffer_size": 4400,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 180.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
@@ -163,14 +279,31 @@
 	},
 	"file_history":
 	[
+		"/home/david/Projekt/kiss/cordova/www/css/main.css",
+		"/home/david/Projekt/kiss/kiss.sublime-project",
+		"/home/david/Projekt/kiss/app/js/main.js",
+		"/home/david/Projekt/kiss/app/js/model.js",
+		"/home/david/Projekt/kiss/app/js/backend.js",
+		"/home/david/Projekt/kiss/app.js",
+		"/home/david/Projekt/kiss/TODO",
+		"/home/david/Projekt/kiss/package.json",
+		"/home/david/Projekt/kiss/speedtest.js",
+		"/home/david/Projekt/kiss/Gruntfile.js",
 		"/home/david/.config/sublime-text-3/Packages/Sublime-JSHint/.jshintrc",
+		"/home/david/Projekt/smw/sharemyworld.se/smw/client/modules/smw-behaviour/FastclickBehaviour.js",
+		"/home/david/Projekt/smw/sharemyworld.se/smw/client/modules/smw-view/FastclickService.js",
+		"/home/david/Projekt/kiss/app/sass/main.scss",
+		"/home/david/Projekt/kiss/app/index.html",
+		"/home/david/Projekt/kiss/beer/platforms/android/bin/Beer-debug.apk",
+		"/home/david/Projekt/kiss/app/js/angular.min.js",
+		"/home/david/Projekt/smw/sharemyworld.se/smw/client/profile/mobile-webkit/index.html",
+		"/home/david/Projekt/kiss/app/css/main.css",
 		"/home/david/Projekt/smw/sharemyworld.se/smw/core/framework/queue/Message.php",
 		"/home/david/Projekt/smw/sharemyworld.se/smw/schema/smw/story/storycovermessage.json",
 		"/home/david/Projekt/smw/sharemyworld.se/smw/core/configuration/test/queueConfig.php",
 		"/home/david/Projekt/smw/sharemyworld.se/smw/core/configuration/production/queueConfig.php",
 		"/home/david/Projekt/smw/sharemyworld.se/smw/core/configuration/development/queueConfig.php",
 		"/home/david/Projekt/smw/sharemyworld.se/smw/schema/smw/media/imagetranscodemessage.json",
-		"/home/david/Projekt/kiss/Gruntfile.js",
 		"/home/david/Projekt/smw/sharemyworld.se/smw/schema/smw/themeservice.json",
 		"/home/david/Projekt/smw/sharemyworld.se/smw/schema/smw/theme/theme.json",
 		"/home/david/Projekt/smw/sharemyworld.se/smw/client/profile/mobile-webkit/js/widgets/InputDialogWidget.js",
@@ -185,7 +318,6 @@
 		"/home/david/Projekt/smw/sharemyworld.se/smw/client/modules/smw-widget/rpc-iframe/RpcIframeWidget.js",
 		"/home/david/Projekt/smw/sharemyworld.se/smw/client/modules/smw-widget/story-browser/StoryBrowserWidget.js",
 		"/home/david/Projekt/smw/sharemyworld.se/smw/client/modules/smw-behaviour/FadeBehaviour.js",
-		"/home/david/Projekt/smw/sharemyworld.se/smw/client/profile/mobile-webkit/index.html",
 		"/home/david/Projekt/smw/sharemyworld.se/smw/client/profile/mobile-webkit/templates/views/StoryBrowser.html",
 		"/home/david/Projekt/smw/sharemyworld.se/smw/client/profile/mobile-webkit/js/controllers/StoryBrowserCtrl.js",
 		"/home/david/Projekt/smw/sharemyworld.se/smw/client/profile/mobile-webkit/js/controllers/StoryCtrl.js",
@@ -198,7 +330,6 @@
 		"/home/david/Projekt/smw/sharemyworld.se/smw/client/modules/smw-view/StoryBrowserService.js",
 		"/home/david/Projekt/smw/sharemyworld.se/smw/client/profile/reader/head.html",
 		"/home/david/Projekt/smw/sharemyworld.se/smw/client/modules/smw-reader/reader-dimensions/ReaderDimensionsBehaviour.js",
-		"/home/david/Projekt/smw/sharemyworld.se/smw/client/modules/smw-behaviour/FastclickBehaviour.js",
 		"/home/david/Projekt/smw/sharemyworld.se/smw/client/profile/web/googlemapsiframe/googlemaps.html",
 		"/home/david/Projekt/smw/sharemyworld.se/smw/client/profile/web/googlemapsiframe/maps_common.js",
 		"/home/david/Projekt/smw/sharemyworld.se/smw/client/profile/mobile-webkit/js/controllers/IframeCtrl.js",
@@ -277,6 +408,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"app",
+			"day",
+			"id",
+			"touchstart",
 			"\"",
 			"getImageDataStorageForSize",
 			";\n",
@@ -324,8 +459,202 @@
 	"groups":
 	[
 		{
+			"selected": 3,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Gruntfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 687,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								115,
+								115
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2007,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1876,
+								1876
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2
+						},
+						"translation.x": 0.0,
+						"translation.y": 1032.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "cordova/www/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3999,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1347,
+								1347
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 69.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "cordova/www/sass/main.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2987,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								469,
+								469
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "cordova/www/js/model.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3225,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1753,
+								1753
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2
+						},
+						"translation.x": 0.0,
+						"translation.y": 1102.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "cordova/www/js/backend.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 952,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								891,
+								891
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "cordova/www/js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4400,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2047,
+								2047
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2
+						},
+						"translation.x": 0.0,
+						"translation.y": 1526.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -335,7 +664,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 39.0
 	},
 	"layout":
 	{
@@ -371,6 +700,38 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"main",
+				"cordova/www/js/main.js"
+			],
+			[
+				"ba",
+				"cordova/www/js/backend.js"
+			],
+			[
+				"mod",
+				"cordova/www/js/model.js"
+			],
+			[
+				"inde",
+				"cordova/www/index.html"
+			],
+			[
+				"bee",
+				"beer/platforms/android/bin/Beer-debug.apk"
+			],
+			[
+				"angu",
+				"app/js/angular.min.js"
+			],
+			[
+				"ma",
+				"app/css/main.css"
+			],
+			[
+				"app",
+				"app/js/main.js"
+			],
 			[
 				"dime",
 				"client/modules/smw-reader/reader-dimensions/ReaderDimensionsBehaviour.js"
@@ -716,10 +1077,6 @@
 				"profile/mobile-webkit/js/controllers/DashboardCtrl.js"
 			],
 			[
-				"inde",
-				"profile/mobile-webkit/index.html"
-			],
-			[
 				"const",
 				"profile/mobile-webkit/js/Constants.js"
 			]
@@ -728,11 +1085,15 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"",
+				"~/Projekt/smw/sharemyworld.se/smw.sublime-project"
+			]
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"select_symbol":
 	{

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html  ng-app="beer">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Vad drack jag sist?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=devicedpi" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/roboto_light/stylesheet.css">
+    <link rel="stylesheet" href="css/roboto_regular/stylesheet.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/ui-bootstrap-custom-tpls-0.6.0.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/backend.js"></script>
+    <script type="text/javascript" src="js/model.js"></script>
+    <script src="cordova.js"></script>
+    <!-- <script src="http://localhost:35729/livereload.js"></script> -->
+</body>
+</head>
+<body ng-controller="BeerCtrl">
+    <div id="menu">
+        <ul>
+            <li tap="today()">Drucken öl</li>
+            <li tap="add()">Registrera öl</li>
+            <li tap="changeUser()" >Byt användare</li>
+        </ul>
+    </div>
+    <div id="header" ng-class="{ menuopen: menuState }">
+        <img tap="toggleMenu()" src="img/menu.png" /> 
+        <span ng-show="view === 'name'">Användare</span>
+        <span ng-show="view === 'add'">Registrera öl</span>
+        <span ng-show="view === 'list'">Drucken öl</span>
+    </div>
+    <div id="mainview" ng-switch="view" ng-class="{ menuopen: menuState }">
+        <div ng-switch-when="name">
+            <form name="nameForm" ng-submit="setName(name)" role="form">
+                <div class="form-group">
+                    <label>Vem är du?</label>
+                    <input type="text" ng-model="name" ng-pattern="/^[a-zåäö0-9.-]+$/i" typeahead="user for user in users | filter:$viewValue | limitTo:8">
+                </div>
+                <input type="submit" value="Ok" class="btn btn-default" ng-disabled="!nameForm.$valid">
+                <div ng-hide="nameForm.$valid">
+                    Håll det kort. Bara bokstäver, siffror och .-
+                </div>
+            </form>
+        </div>
+
+
+        <div ng-switch-when="add">
+            <form name="beerForm" ng-submit="addBeer()" role="form">
+                <div class="form-group">
+                    <label>Vad drack du?</label>
+                    <input ng-required type="text" ng-model="beer.name" typeahead="beer for beer in beers | filter:$viewValue | limitTo:8">
+                </div>
+                <div class="form-group">
+                    <label>Betyg?</label>
+                    <rating value="beer.rating"></rating>
+                </div>
+                <div class="form-group">
+                    <label>Kommentar</label>
+                    <textarea ng-model="beer.comment"></textarea>
+                </div>
+                <input type="submit" value="Lägg till" class="btn btn-default" ng-disabled="!beerForm.$valid">
+                <button tap="cancel()" class="btn btn-default">Avbryt</button>            
+            </form>
+            
+        </div>
+
+        <div ng-switch-when="list">
+            <div full-height class="day today">
+                <ul>
+                    <li ng-repeat="beer in today" ng-class="{ odd: $odd, even: $even, first: $first, last: $last}">
+                        <rating value="beer.rating" read-only></rating><span class="name">{{ beer.name }}</span> 
+                    </li>
+                </ul>
+                <button class="btn" tap="add()">Lägg till</button>
+            </div>
+
+            <div full-height ng-repeat="day in days" class="day day-{{ $index }}">
+                <h3>{{ day.date | date:'yyyy-MM-dd'}}</h3>
+                <ul>
+                    <li ng-repeat="beer in day.beers" ng-class="{ odd: $odd, even: $even, first: $first, last: $last}">
+                        <rating value="beer.rating" read-only></rating><span class="name">{{ beer.name }}</span> 
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</body>    
+</html>

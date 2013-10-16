@@ -1,0 +1,42 @@
+
+
+TODO
+====
+
+Model
+-----
+
+Redis backend with a list.
+One list to rule them all.
+
+All of the data is cached in localstorage and synced when possible.
+By just getting the last part of the list we can get the latest changes
+this means we can never delete or update anything in the list.
+
+Value is a json object which is either a whole object or a diff.
+{
+    "user": "david",
+    "when": 12333443425,
+    "name": "Bedarö Bitter",
+    "rating": 5,
+    "comment": "240 characters of anger or bliss"
+}
+
+A diff is just a partial object, but 'user' and 'when' is key and should always be present.
+There is a special diff to do deletes 'cause just deleting with empty object isn't explicit.
+
+{
+    "user": "david",
+    "when": 12333443425,
+    "delete": true
+}
+
+Users is also a list, but just an ordninary list with strings.
+As you can see the backend model is made for syncing, and just a couple of users.
+
+Webserver
+---------
+node+express+when+then_redis
+
+Super simple JSON webservice. index.html and static is served by nginx instead. Proxied by nginx.
+
