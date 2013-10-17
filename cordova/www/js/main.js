@@ -83,7 +83,7 @@ function($scope,  model,  backend){
     $scope.view = 'add'
   }
 
-  $scope.today = function(){
+  $scope.todaysBeer = function(){
     $scope.menuState = false
     $scope.view = 'list'
   }

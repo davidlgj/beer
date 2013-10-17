@@ -22,7 +22,7 @@
 <body ng-controller="BeerCtrl">
     <div id="menu">
         <ul>
-            <li tap="today()">Dina öl</li>
+            <li tap="todaysBeer()">Dina öl</li>
             <li tap="everyones()">Allas idag</li>
             <li tap="add()">Registrera öl</li>
             <li tap="changeUser()" >Byt användare</li>
@@ -33,6 +33,7 @@
         <span ng-show="view === 'name'">Användare</span>
         <span ng-show="view === 'add'">Registrera öl</span>
         <span ng-show="view === 'list'">Drucken öl</span>
+        <span ng-show="view === 'everyones'">Allas idag</span>
     </div>
     <div id="mainview" ng-switch="view" ng-class="{ menuopen: menuState }">
         <div ng-switch-when="name">
