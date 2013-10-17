@@ -22,7 +22,8 @@
 <body ng-controller="BeerCtrl">
     <div id="menu">
         <ul>
-            <li tap="today()">Drucken öl</li>
+            <li tap="today()">Dina öl</li>
+            <li tap="everyones()">Allas idag</li>
             <li tap="add()">Registrera öl</li>
             <li tap="changeUser()" >Byt användare</li>
         </ul>
@@ -71,8 +72,12 @@
         <div ng-switch-when="list">
             <div full-height class="day today">
                 <ul>
-                    <li ng-repeat="beer in today" ng-class="{ odd: $odd, even: $even, first: $first, last: $last}">
+                    <li ng-repeat="beer in today" ng-class="{ odd: $odd, even: $even, first: $first, last: $last}" tap="toggleSelection($index)">
                         <rating value="beer.rating" read-only></rating><span class="name">{{ beer.name }}</span> 
+                        <div ng-show="selectedBeer === $index" class="comment">
+                            <p>{{ beer.comment }}</p>
+                            <!-- <button tap="delete(beer)">TA BORT</button> --> 
+                        </div>
                     </li>
                 </ul>
                 <button class="btn" tap="add()">Lägg till</button>
@@ -88,6 +93,22 @@
             </div>
 
         </div>
+
+        <div ng-switch-when="everyones">
+            <div full-height class="day today">
+                <ul>
+                    <li ng-repeat="beer in everyonesBeer" ng-class="{ odd: $odd, even: $even, first: $first, last: $last}" tap="toggleSelection($index)">
+                        <rating value="beer.rating" read-only></rating><span class="name">{{ beer.name }} (<span class="user">{{ beer.user }}</span>)</span> 
+                        <div ng-show="selectedBeer === $index" class="comment">
+                            <p>{{ beer.comment }}</p>
+                            <!-- <button tap="delete(beer)">TA BORT</button> --> 
+                        </div>
+                    </li>
+                </ul>
+                <button class="btn" tap="sync()">Synka</button>
+            </div>
+        </div>
+
     </div>
 </body>    
 </html>

@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"by",
+				"byuser"
+			],
+			[
 				"webkit-tran",
 				"webkit-transition"
 			],
@@ -203,7 +207,7 @@
 			"file": "app.js",
 			"settings":
 			{
-				"buffer_size": 2007,
+				"buffer_size": 1984,
 				"line_ending": "Unix"
 			}
 		},
@@ -211,7 +215,7 @@
 			"file": "cordova/www/index.html",
 			"settings":
 			{
-				"buffer_size": 3999,
+				"buffer_size": 4318,
 				"line_ending": "Unix"
 			}
 		},
@@ -219,7 +223,7 @@
 			"file": "cordova/www/sass/main.scss",
 			"settings":
 			{
-				"buffer_size": 2987,
+				"buffer_size": 5258,
 				"line_ending": "Unix"
 			}
 		},
@@ -227,7 +231,7 @@
 			"file": "cordova/www/js/model.js",
 			"settings":
 			{
-				"buffer_size": 3225,
+				"buffer_size": 3975,
 				"line_ending": "Unix"
 			}
 		},
@@ -243,7 +247,7 @@
 			"file": "cordova/www/js/main.js",
 			"settings":
 			{
-				"buffer_size": 4400,
+				"buffer_size": 4552,
 				"line_ending": "Unix"
 			}
 		}
@@ -408,6 +412,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"click",
 			"app",
 			"day",
 			"id",
@@ -459,7 +464,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -495,15 +500,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2007,
+						"buffer_size": 1984,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1876,
-								1876
+								237,
+								237
 							]
 						],
 						"settings":
@@ -512,7 +517,7 @@
 							"tab_size": 2
 						},
 						"translation.x": 0.0,
-						"translation.y": 1032.0,
+						"translation.y": 115.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -523,15 +528,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3999,
+						"buffer_size": 4318,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1347,
-								1347
+								2575,
+								2575
 							]
 						],
 						"settings":
@@ -539,7 +544,7 @@
 							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 69.0,
+						"translation.y": 1014.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -550,15 +555,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2987,
+						"buffer_size": 5258,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								469,
-								469
+								4167,
+								4167
 							]
 						],
 						"settings":
@@ -566,7 +571,7 @@
 							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2421.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -577,15 +582,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3225,
+						"buffer_size": 3975,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1753,
-								1753
+								3021,
+								3021
 							]
 						],
 						"settings":
@@ -594,7 +599,7 @@
 							"tab_size": 2
 						},
 						"translation.x": 0.0,
-						"translation.y": 1102.0,
+						"translation.y": 2691.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -633,15 +638,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4400,
+						"buffer_size": 4552,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2047,
-								2047
+								1646,
+								1646
 							]
 						],
 						"settings":
@@ -650,7 +655,7 @@
 							"tab_size": 2
 						},
 						"translation.x": 0.0,
-						"translation.y": 1526.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -700,6 +705,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"model",
+				"cordova/www/js/model.js"
+			],
 			[
 				"main",
 				"cordova/www/js/main.js"

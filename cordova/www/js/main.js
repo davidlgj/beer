@@ -9,7 +9,8 @@ angular.module('beer',['ui.bootstrap'])
 angular.module('beer').controller('BeerCtrl',[
         '$scope','model','backend',
 function($scope,  model,  backend){
-  
+
+  $scope.selectedBeer = -1;  
   $scope.menuState = false
   $scope.beer = { name: '', rating: 3 }
 
@@ -32,6 +33,7 @@ function($scope,  model,  backend){
     $scope.beers = model.names() 
     if ($scope.name && $scope.name !== "") {
       $scope.today = model.today($scope.name)
+      $scope.everyonesBeer = model.today()
       $scope.days  = model.older($scope.name)
     }
   }
@@ -86,14 +88,36 @@ function($scope,  model,  backend){
     $scope.view = 'list'
   }
 
+  $scope.everyones = function(){
+    $scope.menuState = false
+    $scope.view = 'everyones'
+
+    $scope.sync()
+  }
+
+  $scope.sync = function(){
+    model.sync().then(setState)
+  }
+
   $scope.changeUser = function(){
     $scope.menuState = false
     $scope.view = 'name'
   }
 
-  //FIXME: move to directive
   $scope.toggleMenu = function(){
-    $scope.menuState = !$scope.menuState;
+    $scope.menuState = !$scope.menuState
+  }
+
+  $scope.toggleSelection = function(index) {
+    if ($scope.selectedBeer === index) {
+      $scope.selectedBeer = -1
+    } else {
+      $scope.selectedBeer = index
+    }
+  }
+
+  $scope.delete = function(beer) {
+
   }
 
 }]).directive('fullHeight', function() {    

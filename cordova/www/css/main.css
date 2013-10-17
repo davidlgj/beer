@@ -86,9 +86,19 @@ label, input {
     margin: 0px;
     padding: 0px; }
     .day ul li {
-      height: 32px; }
+      min-height: 32px; }
       .day ul li div, .day ul li span {
         display: inline-block; }
+      .day ul li div.comment {
+        display: block;
+        padding: 10px;
+        font-size: 80%;
+        margin-left: 78px;
+        margin-top: 8px;
+        margin-bottom: 16px;
+        border-radius: 3px;
+        background-color: #777777;
+        button-float: right; }
       .day ul li .rating {
         margin-right: 10px;
         width: 70px; }

@@ -121,10 +121,25 @@ label,input {
         margin: 0px;
         padding: 0px;
         li {
-            height: 32px;
+            min-height: 32px;
 
             div,span {
                 display: inline-block;
+            }
+
+            div.comment {
+                display: block;
+                padding: 10px;
+                font-size: 80%;
+                margin-left: 78px;
+                margin-top: 8px;
+                margin-bottom: 16px;
+                border-radius: 3px;
+                background-color: #777;
+
+                button: {
+                    float: right;
+                }
             }
 
             .rating {

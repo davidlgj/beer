@@ -147,14 +147,13 @@ angular.module('beer').factory('model',['backend',function(backend){
       return days;
     },
     add: function(user,name,comment,rating) {
-       backend.add({
+       return backend.add({
           user: user,
           when: Date.now(),
           name: name,
           comment: comment || '',
           rating: rating
-       })
-       return sync()
+       }).then(sync)
     },
     edit: function(diff){
       //FIXME: what should diff be? 
