@@ -3,6 +3,15 @@
 TODO
 ====
 
+Immmediate todo list of features:
+
+* Group beer and brewery, so that choosing a beer also fills in brewery
+* Save pub last inputed pub name and prefilll with that, we're usually att the same place
+* fix tonight page
+* more styling
+* select some colors
+
+
 Model
 -----
 
@@ -17,7 +26,9 @@ Value is a json object which is either a whole object or a diff.
 {
     "user": "david",
     "when": 12333443425,
+    "where": "Ölrepubliken"
     "name": "Bedarö Bitter",
+    "brewery": "Nynäshamn",
     "rating": 5,
     "comment": "240 characters of anger or bliss"
 }

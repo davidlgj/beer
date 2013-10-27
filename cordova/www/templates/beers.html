@@ -1,0 +1,35 @@
+ <div>
+    <div full-height class="day today">
+        <ul>
+            <li ng-repeat="beer in today" ng-class="{ odd: $odd, even: $even, first: $first, last: $last}" ng-click="toggleSelection($index)">
+                <div class="name">{{ beer.name }}</div>
+                <rating value="beer.rating" read-only></rating>
+                <div class="brewery">{{ beer.brewery }}</div>
+                <div ng-show="isBeerSelected($index)" class="comment">
+                    <p>{{ beer.comment }}</p>
+                    <!-- <button ng-click="delete(beer)">TA BORT</button> --> 
+                    <div class="place">{{ beer.where }} <span>{{ beer.when | date:'H:mm' }}</span></div>
+                </div>
+            </li>
+        </ul>
+        <button class="btn" ng-click="page('add')">Lägg till</button>
+    </div>
+
+    <div full-height ng-repeat="day in days" class="day day-{{ $index }}">
+        <h3>{{ day[0].when | date:'yyyy-MM-dd'}}</h3>
+        <ul>
+            <li ng-repeat="beer in day" ng-class="{ odd: $odd, even: $even, first: $first, last: $last}" ng-click="toggleSelection($index,beer.when)">
+                <div class="name">{{ beer.name }}</div>
+                <rating value="beer.rating" read-only></rating>
+                <div class="brewery">rewery name here</div>
+                <div ng-show="isBeerSelected($index,beer.when)" class="comment">
+                    <span>Place of drinking</span>
+                    <p>{{ beer.comment }}</p>
+                    <!-- <button ng-click="delete(beer)">TA BORT</button> --> 
+                    <div class="place">{{ beer.where }} <span>{{ beer.when | date:'H:mm' }}</span></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</div>

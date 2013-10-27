@@ -1,0 +1,27 @@
+<div>
+    <form name="beerForm" ng-submit="addBeer()" role="form">
+        <div class="form-group">
+            <label>Vad dricker du?</label>
+            <input ng-required type="text" ng-model="beer.name" typeahead="beer for beer in beers | filter:$viewValue | limitTo:8">
+        </div>
+        <div class="form-group">
+            <label>Vilket bryggeri?</label>
+            <input ng-required type="text" ng-model="beer.brewery" typeahead="brewery for brewery in brewers | filter:$viewValue | limitTo:8">
+        </div>
+        <div class="form-group">
+            <label>Vart?</label>
+            <input ng-required type="text" ng-model="beer.where" typeahead="pub for pub in places | filter:$viewValue | limitTo:8">
+        </div>
+        <div class="form-group">
+            <label>Betyg?</label>
+            <rating value="beer.rating"></rating>
+        </div>
+        <div class="form-group">
+            <label>Kommentar</label>
+            <textarea ng-model="beer.comment"></textarea>
+        </div>
+        <input type="submit" value="Lägg till" class="btn btn-default" ng-disabled="!beerForm.$valid">
+        <button ng-click="cancel()" class="btn btn-default">Avbryt</button>            
+    </form>
+    
+</div>

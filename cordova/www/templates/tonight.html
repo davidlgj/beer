@@ -1,0 +1,14 @@
+<div>
+    <div full-height class="day today">
+        <ul>
+            <li ng-repeat="beer in everyonesBeer" ng-class="{ odd: $odd, even: $even, first: $first, last: $last}" tap="toggleSelection($index)">
+                <rating value="beer.rating" read-only></rating><span class="name">{{ beer.name }} (<span class="user">{{ beer.user }}</span>)</span> 
+                <div ng-show="selectedBeer === $index" class="comment">
+                    <p>{{ beer.comment }}</p>
+                    <!-- <button tap="delete(beer)">TA BORT</button> --> 
+                </div>
+            </li>
+        </ul>
+        <button class="btn" ng-click="page('add')">Synka</button>
+    </div>
+</div>

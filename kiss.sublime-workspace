@@ -4,6 +4,42 @@
 		"selected_items":
 		[
 			[
+				"beer",
+				"beerdate"
+			],
+			[
+				"update",
+				"updateList"
+			],
+			[
+				"today",
+				"todaystr"
+			],
+			[
+				"length",
+				"length-1"
+			],
+			[
+				"day",
+				"daystr"
+			],
+			[
+				"get",
+				"getFullYear"
+			],
+			[
+				"days",
+				"daysList"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"backgrou",
+				"background-color"
+			],
+			[
 				"by",
 				"byuser"
 			],
@@ -196,50 +232,26 @@
 	"buffers":
 	[
 		{
-			"file": "Gruntfile.js",
-			"settings":
-			{
-				"buffer_size": 687,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app.js",
-			"settings":
-			{
-				"buffer_size": 1984,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "cordova/www/index.html",
 			"settings":
 			{
-				"buffer_size": 4318,
+				"buffer_size": 2528,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "cordova/www/sass/main.scss",
+			"file": "cordova/www/templates/tonight.html",
 			"settings":
 			{
-				"buffer_size": 5258,
+				"buffer_size": 685,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "cordova/www/js/model.js",
+			"file": "cordova/www/templates/beers.html",
 			"settings":
 			{
-				"buffer_size": 3975,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "cordova/www/js/backend.js",
-			"settings":
-			{
-				"buffer_size": 952,
+				"buffer_size": 1045,
 				"line_ending": "Unix"
 			}
 		},
@@ -247,7 +259,79 @@
 			"file": "cordova/www/js/main.js",
 			"settings":
 			{
-				"buffer_size": 4552,
+				"buffer_size": 685,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cordova/www/js/controllers/BeerCtrl.js",
+			"settings":
+			{
+				"buffer_size": 905,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cordova/www/js/controllers/BeersCtrl.js",
+			"settings":
+			{
+				"buffer_size": 1044,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cordova/www/js/controllers/TonightCtrl.js",
+			"settings":
+			{
+				"buffer_size": 129,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cordova/www/js/controllers/UserCtrl.js",
+			"settings":
+			{
+				"buffer_size": 567,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cordova/www/js/controllers/AddBeerCtrl.js",
+			"settings":
+			{
+				"buffer_size": 616,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cordova/www/js/directives/rating.js",
+			"settings":
+			{
+				"buffer_size": 689,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cordova/www/sass/main.scss",
+			"settings":
+			{
+				"buffer_size": 5646,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cordova/www/js/model.js",
+			"settings":
+			{
+				"buffer_size": 3181,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "cordova/www/templates/add.html",
+			"settings":
+			{
+				"buffer_size": 777,
 				"line_ending": "Unix"
 			}
 		}
@@ -283,16 +367,35 @@
 	},
 	"file_history":
 	[
+		"/home/david/Projekt/kiss/Gruntfile.js",
+		"/home/david/Projekt/kiss/app.js",
+		"/home/david/Projekt/kiss/cordova/www/index.html",
+		"/home/david/Projekt/kiss/cordova/www/sass/main.scss",
+		"/home/david/Projekt/kiss/cordova/www/js/model.js",
+		"/home/david/Projekt/kiss/cordova/www/js/backend.js",
+		"/home/david/Projekt/kiss/cordova/www/js/directives/rating.js",
+		"/home/david/Projekt/kiss/cordova/www/js/directives/fullHeight.js",
+		"/home/david/Projekt/kiss/cordova/www/js/controllers/BeerCtrl.js",
+		"/home/david/Projekt/kiss/cordova/www/js/controllers/AddBeerCtrl.js",
+		"/home/david/Projekt/kiss/cordova/www/templates/add.html",
+		"/home/david/Projekt/kiss/cordova/www/js/controllers/UserCtrl.js",
+		"/home/david/Projekt/kiss/cordova/www/templates/user.html",
+		"/home/david/Projekt/kiss/cordova/www/js/controllers/TonightCtrl.js",
+		"/home/david/Projekt/kiss/cordova/www/templates/beers.html",
+		"/home/david/Projekt/kiss/cordova/www/templates/tonight.html",
+		"/home/david/Projekt/kiss/cordova/www/js/controllers/BeersCtrl.js",
+		"/home/david/Projekt/kiss/cordova/www/js/main.js",
+		"/home/david/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/david/Projekt/kiss/speedtest/index.html",
+		"/home/david/Projekt/kiss/speedtest.html",
 		"/home/david/Projekt/kiss/cordova/www/css/main.css",
 		"/home/david/Projekt/kiss/kiss.sublime-project",
 		"/home/david/Projekt/kiss/app/js/main.js",
 		"/home/david/Projekt/kiss/app/js/model.js",
 		"/home/david/Projekt/kiss/app/js/backend.js",
-		"/home/david/Projekt/kiss/app.js",
 		"/home/david/Projekt/kiss/TODO",
 		"/home/david/Projekt/kiss/package.json",
 		"/home/david/Projekt/kiss/speedtest.js",
-		"/home/david/Projekt/kiss/Gruntfile.js",
 		"/home/david/.config/sublime-text-3/Packages/Sublime-JSHint/.jshintrc",
 		"/home/david/Projekt/smw/sharemyworld.se/smw/client/modules/smw-behaviour/FastclickBehaviour.js",
 		"/home/david/Projekt/smw/sharemyworld.se/smw/client/modules/smw-view/FastclickService.js",
@@ -366,7 +469,6 @@
 		"/home/david/Projekt/smw/sharemyworld.se/smw/core/service/theme/ThemeService.php",
 		"/home/david/Projekt/smw/sharemyworld.se/smw/client/profile/foobar/index.html",
 		"/home/david/Projekt/smw/sharemyworld.se/smw/client/modules/smw-reader/layouts/smw-magazine/smw-magazine.js",
-		"/home/david/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
 		"/home/david/Projekt/smw/sharemyworld.se/smw/public/reader.php",
 		"/home/david/Projekt/smw/sharemyworld.se/grunt/tasks/tasks.js",
 		"/home/david/Projekt/smw/sharemyworld.se/Gruntfile.js",
@@ -392,9 +494,7 @@
 		"/home/david/Projekt/smw/sharemyworld.se/smw.sublime-project",
 		"/home/david/.config/sublime-text-3/Packages/User/Distraction Free.sublime-settings",
 		"/home/david/Projekt/smw/sharemyworld.se/.gitignore",
-		"/home/david/.config/sublime-text-3/Packages/Sublime-JSHint/JSHint.sublime-settings",
-		"/home/david/.config/sublime-text-3/Packages/Sublime-JSHint/Default (Linux).sublime-keymap",
-		"/home/david/Projekt/smw/sharemyworld.se/package.sublime-project"
+		"/home/david/.config/sublime-text-3/Packages/Sublime-JSHint/JSHint.sublime-settings"
 	],
 	"find":
 	{
@@ -405,6 +505,7 @@
 		"height": 105.0,
 		"where_history":
 		[
+			"*"
 		]
 	},
 	"find_state":
@@ -412,6 +513,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"rating",
 			"click",
 			"app",
 			"day",
@@ -464,24 +566,105 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Gruntfile.js",
+					"file": "cordova/www/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 687,
+						"buffer_size": 2528,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								115,
-								115
+								1845,
+								1845
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 243.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "cordova/www/templates/tonight.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 685,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								649,
+								649
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "cordova/www/templates/beers.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1045,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								820,
+								820
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "cordova/www/js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 685,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -495,130 +678,102 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "app.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1984,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								237,
-								237
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2
-						},
-						"translation.x": 0.0,
-						"translation.y": 115.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "cordova/www/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4318,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2575,
-								2575
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1014.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "cordova/www/sass/main.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5258,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4167,
-								4167
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 2421.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 4,
-					"file": "cordova/www/js/model.js",
+					"file": "cordova/www/js/controllers/BeerCtrl.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3975,
+						"buffer_size": 905,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3021,
-								3021
+								899,
+								899
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 2691.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "cordova/www/js/backend.js",
+					"file": "cordova/www/js/controllers/BeersCtrl.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 952,
+						"buffer_size": 1044,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								891,
-								891
+								890,
+								890
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2
+						},
+						"translation.x": 0.0,
+						"translation.y": 83.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "cordova/www/js/controllers/TonightCtrl.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 129,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								117,
+								117
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "cordova/www/js/controllers/UserCtrl.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 567,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								556,
+								556
 							]
 						],
 						"settings":
@@ -633,26 +788,134 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "cordova/www/js/main.js",
+					"buffer": 8,
+					"file": "cordova/www/js/controllers/AddBeerCtrl.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4552,
+						"buffer_size": 616,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1646,
-								1646
+								611,
+								611
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 2
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "cordova/www/js/directives/rating.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 689,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								58,
+								58
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "cordova/www/sass/main.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5646,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3072,
+								3072
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "cordova/www/js/model.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3181,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2528,
+								2528
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1679.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "cordova/www/templates/add.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 777,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -706,12 +969,44 @@
 		"selected_items":
 		[
 			[
-				"model",
+				"user",
+				"cordova/www/js/controllers/UserCtrl.js"
+			],
+			[
+				"add",
+				"cordova/www/templates/add.html"
+			],
+			[
+				"mode",
 				"cordova/www/js/model.js"
 			],
 			[
 				"main",
-				"cordova/www/js/main.js"
+				"cordova/www/sass/main.scss"
+			],
+			[
+				"beerc",
+				"cordova/www/js/controllers/BeerCtrl.js"
+			],
+			[
+				"beers",
+				"cordova/www/templates/beers.html"
+			],
+			[
+				"tonig",
+				"cordova/www/templates/tonight.html"
+			],
+			[
+				"inde",
+				"cordova/www/index.html"
+			],
+			[
+				"rating",
+				"cordova/www/js/directives/rating.js"
+			],
+			[
+				"model",
+				"cordova/www/js/model.js"
 			],
 			[
 				"ba",
@@ -720,10 +1015,6 @@
 			[
 				"mod",
 				"cordova/www/js/model.js"
-			],
-			[
-				"inde",
-				"cordova/www/index.html"
 			],
 			[
 				"bee",

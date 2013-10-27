@@ -1,0 +1,12 @@
+<div>
+    <form name="nameForm" ng-submit="setName(name)" role="form">
+        <div class="form-group">
+            <label>Vem är du?</label>
+            <input type="text" ng-model="name" ng-pattern="/^[a-zåäö0-9.-]+$/i" typeahead="user for user in users | filter:$viewValue | limitTo:8">
+        </div>
+        <input type="submit" value="Ok" class="btn btn-default" ng-disabled="!nameForm.$valid">
+        <div ng-hide="nameForm.$valid">
+            Håll det kort. Bara bokstäver, siffror och .-
+        </div>
+    </form>
+</div>

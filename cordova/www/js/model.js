@@ -6,68 +6,21 @@ angular.module('beer').factory('model',['backend',function(backend){
   console.log('model in storage',model)
 
   if (!model) {
-    model = { length: 0, beers: {}, days: {},byuser: {} } 
+    model = { length: 0, beers: {} } 
   } else {
     //stored models only have beers
     //not days
     model.days = {}
-    angular.forEach(model.beers,function(beer){
-      addToDay(beer)
-    })
   }
 
   //utilities
   //create a id for a day
   var  beerId = function(beer) { return beer.name + '/' + beer.when }
 
-  var day = function(timestamp) {
-    var d = new Date(timestamp)
-    var m = d.getMonth()
-    var date = d.getDate()
-    return d.getFullYear()+'-'+(m<10?'0'+m:m)+'-'+(date<10?'0'+date:date)
-  }
-
-  var addToDay = function(beer) {
-    var d = day(beer.when)
-    if (!model.days[d]) {
-      model.days[d] = []
-    }
-    model.days[d].push(beer)
-    /*model.days[d].sort(function(a,b){
-      return a.when - b.when
-    })*/
-
-    //and by user
-    if (!model.byuser[beer.user]) {
-      model.byuser[beer.user] = {}
-    }
-    if (!model.byuser[beer.user][d]) {
-      model.byuser[beer.user][d] = []
-    }
-    model.byuser[beer.user][d].push(beer)
-  }
-
-  var removeFromDay = function(beer) {
-    var d = day(beer.when)
-    if (model.days[d]) {
-      var dayList = model.days[d]
-      for (var i=0; i<dayList.length; i++) {
-        if (dayList[i].name === beer.name && dayList[i].when === beer.when) {
-          model.days[d].splice(i,1)
-          break;
-        }
-      }
-    }
-  }
-
-  
-
   //TODO: make sync two-way enabling offlne
   var sync = function(){
     //since items in the list is never removed we just check for more 
     return backend.beers(model.length).then(function(beers){
-      console.log('beers from backend',beers)
-
       angular.forEach(beers,function(beer){
         model.length++
         
@@ -76,87 +29,106 @@ angular.module('beer').factory('model',['backend',function(backend){
           //it's a beer diff!
           if (beer.delete) {
             delete model.beers[id]
-            removeFromDay(beer)
           } else {
             angular.extend(model.beers[id],beer)
           }
         } else {
           model.beers[id] = beer
-
-          //then add it to the proper day mapping
-          addToDay(beer)
         }
+        console.log('synced')
       })
-
-      console.log('model after sync',model)
     })
+  }
+
+  var pad = function(nr) {
+    if (nr < 10) {
+      return '0'+nr
+    }
+    return nr
   }
 
   return {
     sync: sync,
     names: function(){
       var names = {}
+      var brewers = {}
+      var places = {} 
 
       angular.forEach(model.beers,function(beer){
-        names[beer.name] = true;
+        names[beer.name] = true
+        if (beer.where) {
+            places[beer.where] = true
+        }
+        if (beer.brewery) {
+            brewers[beer.brewery] = true
+        }
       })
       
       var beers = []
       angular.forEach(names,function(v,k){ beers.push(k) })
-      console.log(beers)
-      return beers;
-    },
-    today: function(user){
-      if (user) {
-        if (model.byuser[user]) {
-          return model.byuser[user][day(Date.now())] || [];      
-        } else {
-          return [];
-        }
-      } else {
-        return model.days[day(Date.now())] || [];
+      
+      var brews = []
+      angular.forEach(brewers,function(v,k){ brews.push(k) })
+
+      var where = []
+      angular.forEach(places,function(v,k){ where.push(k) })      
+
+      return {
+        beers: beers,
+        brewers: brews,
+        places: where
       }
     },
-    older: function(user){
+    days: function(user){
+      var days = {}
+      var date = new Date()
       var dates = []
-      var data = []
-      if (user ) {
-        data = model.byuser[user] || []
-      } else {
-        data = model.days
-      }
-      angular.forEach(data,function(v,k){
-          dates.push(k)
-      })
-      dates.sort()
-      dates.reverse()
-
-      //remove today if it's present
-      if (dates[0] === day(Date.now())) {
-        dates.unshift()
-      }
-
-      var days = []
-      angular.forEach(dates,function(d){
-        if (user) {
-          days.push(model.byuser[user][d])
-        } else {
-          days.push(model.days[d])
+      angular.forEach(model.beers,function(beer){
+        date.setTime(beer.when)
+        var daystr = date.getFullYear()+'-'+pad(date.getMonth())+'-'+pad(date.getDate())  
+        if (!user || beer.user === user) {
+          if (!days[daystr]) {
+            days[daystr] = []
+            dates.push(daystr)
+          }
+          days[daystr].push(beer)
         }
       })
-      return days;
+
+      //ok let's sort them and put them in an array
+      dates.sort()
+      var sorted = []
+      var sortfunc = function(a,b){
+        return b.when - a.when
+      }
+      for (var i=dates.length-1; i >= 0; i--) {
+        days[dates[i]].sort(sortfunc)
+        sorted.push(days[dates[i]])
+      }
+
+
+      return sorted
     },
-    add: function(user,name,comment,rating) {
+    add: function(user,name,brewery,where,comment,rating) {
        return backend.add({
           user: user,
           when: Date.now(),
+          where: where,
           name: name,
+          brewery: brewery,
           comment: comment || '',
           rating: rating
-       }).then(sync)
+       })
     },
     edit: function(diff){
-      //FIXME: what should diff be? 
+      return backend.add(diff).then(sync)
+    },
+    delete: function(user,when) {
+      return backend.add({
+          user: user,
+          when: when,
+          delete: true
+       }).then(sync)
     }
   };
 }])
