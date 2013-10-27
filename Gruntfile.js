@@ -12,21 +12,31 @@ module.exports = function(grunt) {
                 }
             }
         },
+        autoprefixer: {
+            options: {
+                browsers: ['last 2 version','android 4','ios 6']
+            },
+            main: {
+                src: 'cordova/www/css/main.css'
+            }
+        },
         watch: {
             sass: {
                 files: ['cordova/www/sass/*.scss'],
-                tasks: ['sass']
+                tasks: ['sass','autoprefixer']
             },
         
-            live: {
-                options: { livereload: true },
-                files: ['cordova/www/app.js','cordova/www/**/*','!cordova/www/sass/*.scss']
-            }
+            // Not fixed to work with autoprefixer yet
+            //live: {
+            //    options: { livereload: true },
+            //    files: ['cordova/www/app.js','cordova/www/**/*','!cordova/www/sass/*.scss']
+            //}
         }
     });
 
+    
 
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-sass');
-
+    grunt.loadNpmTasks('grunt-contrib-watch')
+    grunt.loadNpmTasks('grunt-sass')
+    grunt.loadNpmTasks('grunt-autoprefixer')
 };
