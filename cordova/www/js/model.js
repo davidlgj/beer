@@ -53,6 +53,7 @@ angular.module('beer').factory('model',['backend',function(backend){
       var names = {}
       var brewers = {}
       var places = {} 
+      var beerToBrewery = {}
 
       angular.forEach(model.beers,function(beer){
         names[beer.name] = true
@@ -61,6 +62,7 @@ angular.module('beer').factory('model',['backend',function(backend){
         }
         if (beer.brewery) {
             brewers[beer.brewery] = true
+            beerToBrewery[beer.name] = beer.brewery
         }
       })
       
@@ -76,7 +78,8 @@ angular.module('beer').factory('model',['backend',function(backend){
       return {
         beers: beers,
         brewers: brews,
-        places: where
+        places: where,
+        beerToBrewery: beerToBrewery
       }
     },
     days: function(user){

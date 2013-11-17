@@ -42,6 +42,10 @@ html {
   margin: 5px 10px 0px 5px;
 }
 
+#header > span {
+  vertical-align: middle;
+}
+
 #mainview {
   margin-top: 50px;
   z-index: 10;
@@ -222,4 +226,33 @@ input {
 .rating .rating-star-empty {
   background-image: url('../img/stars.png');
   background-position: -32px 0px;
+}
+
+/* pages */
+
+.tonight .day .rating {
+  width: 170px;
+  display: inline-block;
+}
+
+.tonight .day .user {
+  float: right;
+  display: inline-block;
+  padding-top: 6px;
+}
+
+/* animations */
+
+.animate-show {
+  -webkit-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+}
+
+.animate-show.ng-hide-add,
+.animate-show.ng-hide-remove {
+  display: block !important;
+}
+
+.animate-show.ng-hide {
+  opacity: 0;
 }

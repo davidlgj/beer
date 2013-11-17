@@ -43,6 +43,10 @@ body,html  {
         height: 40px;
         margin: 5px 10px 0px 5px;
     }
+
+    > span {
+        vertical-align: middle;
+    }
 }
 
 #mainview {
@@ -232,6 +236,34 @@ label,input {
 
 }
 
+/* pages */
+.tonight .day {
+    .rating {
+        width: 170px;
+        display: inline-block;
+    }
+
+    .user {
+        float: right;
+        display: inline-block;
+        padding-top: 6px;
+    }
+}
+
+
+/* animations */
+.animate-show {
+    transition: all linear 0.2s;
+}
+
+.animate-show.ng-hide-add,
+.animate-show.ng-hide-remove {
+    display: block !important;
+}
+ 
+.animate-show.ng-hide {
+    opacity: 0;
+}
 
 
 
