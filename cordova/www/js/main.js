@@ -1,4 +1,4 @@
-angular.module('beer',['ui.bootstrap','ngRoute','ngTouch'])
+angular.module('beer',['ngAnimate','ui.bootstrap','ngRoute','ngTouch'])
        .config(function($routeProvider){
           $routeProvider.when('/user', {
             templateUrl: 'templates/user.html',
