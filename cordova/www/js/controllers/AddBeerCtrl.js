@@ -7,9 +7,11 @@ angular.module('beer').controller('AddBeerCtrl',['$scope','model',function($scop
   $scope.working = false
 
   var data = model.names()
+  console.log(data)
   $scope.beers = data.beers || []
   $scope.brewers = data.brewers || []
   $scope.places = data.places || []
+  var beerToBrewery = data.beerToBrewery || {}
 
   $scope.setRating = function(rating) {
     $scope.beer.rating = rating;
@@ -28,5 +30,14 @@ angular.module('beer').controller('AddBeerCtrl',['$scope','model',function($scop
     $scope.beer = { name: '', rating: 3 }
     $scope.page('beers')
   }
+
+  //when beer changes check if brewery ís set
+  //otherwise fill it in
+  $scope.$watch('beer.name',function(name,old) {
+    console.log(beerToBrewery[name],$scope.beer.brewery)
+    if (beerToBrewery[name] && !$scope.beer.brewery && $scope.beer.brewery !== "") {
+      $scope.beer.brewery = beerToBrewery[name]
+    }
+  })
 
 }])
