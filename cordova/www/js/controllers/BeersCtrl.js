@@ -3,10 +3,13 @@
 
 angular.module('beer').controller('BeersCtrl',['$scope','model',function($scope,model){
 
-  $scope.app.title = 'Öl'
+  $scope.app.title = 'Öl - '+$scope.app.currentUser
 
   $scope.selectedBeer = { }  
   
+  console.log('Beeeeeeeer')
+
+
   //TODO: refactor to dry this up
   var daystr = function(when) {
     var date = new Date(when)

@@ -5,6 +5,12 @@ $venus: #FF05A3;
 $mylove: #465059;
 $noname: #FFC6D6;
 
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);  
+} 
+
+
 body,html  {
     width: 100%;
     margin: 0;
@@ -13,6 +19,8 @@ body,html  {
     color: #fefefe;
     font-family: "robotolight";
     font-size: 22px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);  
+    overflow:hidden;
 }
 
 .enable-transition-all {
@@ -39,6 +47,7 @@ body,html  {
     }
 
     img {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);  
         width: 40px;
         height: 40px;
         margin: 5px 10px 0px 5px;
@@ -255,6 +264,12 @@ label,input {
     }
 }
 
+.user {
+    form div.info {
+        padding: 10px;
+        margin-top: 20px;
+    }
+}
 
 /* animations */
 .animate-show {

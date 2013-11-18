@@ -1,5 +1,9 @@
 /* palette http://www.colourlovers.com/palette/3054028/2_89_00 */
 
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 body,
 html {
   width: 100%;
@@ -9,6 +13,8 @@ html {
   color: #fefefe;
   font-family: "robotolight";
   font-size: 22px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow: hidden;
 }
 
 .enable-transition-all {
@@ -37,6 +43,7 @@ html {
 }
 
 #header img {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   width: 40px;
   height: 40px;
   margin: 5px 10px 0px 5px;
@@ -244,6 +251,11 @@ input {
   color: #777777;
   font-size: 120%;
   font-weight: bold;
+}
+
+.user form div.info {
+  padding: 10px;
+  margin-top: 20px;
 }
 
 /* animations */

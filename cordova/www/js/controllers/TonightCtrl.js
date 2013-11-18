@@ -3,7 +3,7 @@
 
 angular.module('beer').controller('TonightCtrl',['$scope','model',function($scope,model){
 
-  $scope.app.title = 'Dricks ikväll'
+  $scope.app.title = 'Vad alla dricker'
 
 
   $scope.selectedBeer = { }  
@@ -17,35 +17,39 @@ angular.module('beer').controller('TonightCtrl',['$scope','model',function($scop
     return date.getFullYear()+'-'+date.getMonth()+'-'+date.getDate()  
   }
 
-  $scope.toggleSelection = function(index,when) {
-    var key = angular.isDefined(when)?daystr(when):daystr(Date.now())
-    if ($scope.selectedBeer[key] === index) {
+  $scope.toggleSelection = function(key) {
+    if ($scope.selectedBeer[key]) {
       delete $scope.selectedBeer[key]
     } else {
-      $scope.selectedBeer[key] = index
+      $scope.selectedBeer[key] = true
     }
   }
 
-  $scope.isBeerSelected = function(index,when) {
-    var key = angular.isDefined(when)?daystr(when):daystr(Date.now())
-    return $scope.selectedBeer[key] === index
+  $scope.isBeerSelected = function(key) {
+    return $scope.selectedBeer[key] === true
   }
 
-
   var setState = function(){
-    var days = model.days()
-    console.log('days',days)
-    var today = new Date()
-    if (days.length > 0 && days[0].length) {
-      var beerdate = new Date(days[0][0].when)
-      
-      if (today.getDate() === beerdate.getDate() && today.getMonth() === beerdate.getMonth() && today.getFullYear() === beerdate.getFullYear()) {  
-        $scope.today = days.shift()
-      } else {
-        $scope.today = [];
+    
+    if ($scope.app.currentUser && $scope.app.currentUser !== "") {
+      var days = model.days()
+      console.log('days',days)
+
+      var today = new Date()
+      if (days.length > 0 && days[0].length) {
+        var beerdate = new Date(days[0][0].when)
+        
+        if (today.getDate() === beerdate.getDate() && today.getMonth() === beerdate.getMonth() && today.getFullYear() === beerdate.getFullYear()) {  
+          $scope.today = days.shift()
+        } else {
+          $scope.today = [];
+        }
+        
+        $scope.days  = days
       }
     }
   }
+
 
   model.sync().then(setState)
 

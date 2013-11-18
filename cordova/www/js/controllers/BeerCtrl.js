@@ -18,7 +18,7 @@ function($scope,  $location,  $rootScope){
     $scope.app.currentUser = name
     $location.path('/beers')
   } else {
-    $location.path('/beers')
+    $location.path('/user')
   }
 
 
