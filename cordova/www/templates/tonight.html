@@ -13,4 +13,22 @@
             </li>
         </ul>
     </div>
+
+    <div full-height ng-repeat="day in days" class="day day-{{ $index }}">
+        <h3>{{ day[0].when | date:'yyyy-MM-dd'}}</h3>
+        <ul>
+            <li ng-repeat="beer in day" 
+                ng-class="{ odd: $odd, even: $even, first: $first, last: $last}" 
+                ng-click="toggleSelection(beer.when)"
+                taphold="remove(beer)">
+                <div class="name">{{ beer.name }}</div>
+                <div class="brewery">{{ beer.brewery }}</div>
+                <rating value="beer.rating" read-only></rating><span class="user">{{ beer.user }}</span>
+                <div ng-show="isBeerSelected(beer.when)" class="comment animate-show">
+                    <p>{{ beer.comment }}</p>
+                    <div class="place">{{ beer.where }} <span>{{ beer.when | date:'H:mm' }}</span></div>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>
