@@ -17,7 +17,7 @@
    inkscape:export-filename="/home/david/Projekt/kiss/skiss.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90"
-   sodipodi:docname="Nytt dokument 1">
+   sodipodi:docname="skiss.svg">
   <defs
      id="defs4">
     <filter
@@ -94,8 +94,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="262.09991"
-     inkscape:cy="286.42208"
+     inkscape:cx="-249.5"
+     inkscape:cy="598.5"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -966,5 +966,56 @@
              sodipodi:role="line">Nynäshamn</tspan></text>
       </g>
     </g>
+    <path
+       sodipodi:type="star"
+       style="fill:#fce94f;fill-opacity:1;stroke:none"
+       id="path4068"
+       sodipodi:sides="5"
+       sodipodi:cx="-600.31744"
+       sodipodi:cy="82.619049"
+       sodipodi:r1="16.564312"
+       sodipodi:r2="8.282156"
+       sodipodi:arg1="-0.32175055"
+       sodipodi:arg2="0.30656798"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m -584.60316,77.380954 -7.81828,7.737554 1.9417,10.827055 -9.77483,-5.044597 -9.69712,5.192417 1.7771,-10.855286 -7.93485,-7.617965 10.87314,-1.66434 4.79311,-9.900578 4.94287,9.826668 z"
+       transform="matrix(1.0156013,0.00908989,-0.00908989,1.0156013,354.63875,381.35959)"
+       inkscape:transform-center-x="-0.0070552303"
+       inkscape:transform-center-y="-1.5997667"
+       inkscape:export-filename="/home/david/Projekt/kiss/cordova/www/img/stars.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="fill:#fcaf3e;fill-opacity:1;stroke:none"
+       id="rect4072"
+       width="3.3333333"
+       height="0.95238096"
+       x="-602.38098"
+       y="110.07937"
+       transform="translate(0,437.36218)"
+       rx="4.287096" />
+    <path
+       inkscape:transform-center-y="-1.5997667"
+       inkscape:transform-center-x="-0.0070552303"
+       transform="matrix(1.0156013,0.00908989,-0.00908989,1.0156013,387.63875,381.35959)"
+       d="m -584.60316,77.380954 -7.81828,7.737554 1.9417,10.827055 -9.77483,-5.044597 -9.69712,5.192417 1.7771,-10.855286 -7.93485,-7.617965 10.87314,-1.66434 4.79311,-9.900578 4.94287,9.826668 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="false"
+       sodipodi:arg2="0.30656798"
+       sodipodi:arg1="-0.32175055"
+       sodipodi:r2="8.282156"
+       sodipodi:r1="16.564312"
+       sodipodi:cy="82.619049"
+       sodipodi:cx="-600.31744"
+       sodipodi:sides="5"
+       id="path4076"
+       style="fill:#eeeeec;fill-opacity:1;stroke:none"
+       sodipodi:type="star"
+       inkscape:export-filename="/home/david/Projekt/kiss/cordova/www/img/stars.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
   </g>
 </svg>

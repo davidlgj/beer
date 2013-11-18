@@ -121,6 +121,7 @@ input {
 .day {
   padding: 10px;
   padding-top: 20px;
+  position: relative;
 }
 
 .day ul {
@@ -153,7 +154,8 @@ input {
 
 .day ul li div.comment {
   display: block;
-  padding: 10px;
+  /*padding: 10px;*/
+  overflow: hidden;
   font-size: 18px;
   margin-top: 8px;
   margin-bottom: 16px;
@@ -239,13 +241,16 @@ input {
   float: right;
   display: inline-block;
   padding-top: 6px;
+  color: #777777;
+  font-size: 120%;
+  font-weight: bold;
 }
 
 /* animations */
 
 .animate-show {
-  -webkit-transition: all linear 0.2s;
-  transition: all linear 0.2s;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
 }
 
 .animate-show.ng-hide-add,
@@ -254,5 +259,23 @@ input {
 }
 
 .animate-show.ng-hide {
+  opacity: 0;
+}
+
+.more-beer-below {
+  -webkit-transition: opacity ease-in 5s;
+  transition: opacity ease-in 5s;
+  -webkit-transition-delay: 3s;
+  transition-delay: 3s;
+  opacity: 1;
+  position: absolute;
+  bottom: 48px;
+  right: 5px;
+  color: #fafafa;
+  font-size: 32px;
+  height: 40px;
+}
+
+.more-beer-below.fadeout {
   opacity: 0;
 }

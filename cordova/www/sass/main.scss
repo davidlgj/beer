@@ -119,6 +119,7 @@ label,input {
 .day {
     padding: 10px;
     padding-top: 20px;
+    position: relative;
     
     ul {
         list-style: none;
@@ -148,7 +149,8 @@ label,input {
 
             div.comment {
                 display: block;
-                padding: 10px;
+                /*padding: 10px;*/
+                overflow: hidden;
                 font-size: 18px;
                 margin-top: 8px;
                 margin-bottom: 16px;
@@ -247,13 +249,16 @@ label,input {
         float: right;
         display: inline-block;
         padding-top: 6px;
+        color: #777;
+        font-size: 120%;
+        font-weight: bold;
     }
 }
 
 
 /* animations */
 .animate-show {
-    transition: all linear 0.2s;
+    transition: all ease-in-out 0.2s;
 }
 
 .animate-show.ng-hide-add,
@@ -266,4 +271,19 @@ label,input {
 }
 
 
+.more-beer-below {
+    transition: opacity ease-in 5s;
+    transition-delay: 3s;
+    opacity: 1;
+    position: absolute;
+    bottom: 48px;
+    right: 5px;
+    color: #fafafa;
+    font-size: 32px;
+    height: 40px;
+
+    &.fadeout {
+        opacity: 0;
+    }
+}
 

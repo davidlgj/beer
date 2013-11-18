@@ -14,8 +14,8 @@ angular.module('beer').factory('model',['backend',function(backend){
   }
 
   //utilities
-  //create a id for a day
-  var  beerId = function(beer) { return beer.name + '/' + beer.when }
+  //create a id for a beer
+  var  beerId = function(beer) { return beer.user + '/' + beer.when }
 
   //TODO: make sync two-way enabling offlne
   var sync = function(){
@@ -25,9 +25,11 @@ angular.module('beer').factory('model',['backend',function(backend){
         model.length++
         
         var id = beerId(beer)
+        console.log(beer,id,model.beers[id])
         if (model.beers[id]) {
           //it's a beer diff!
           if (beer.delete) {
+            console.log('delete!')
             delete model.beers[id]
           } else {
             angular.extend(model.beers[id],beer)

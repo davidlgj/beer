@@ -13,18 +13,16 @@ angular.module('beer').controller('BeersCtrl',['$scope','model',function($scope,
     return date.getFullYear()+'-'+date.getMonth()+'-'+date.getDate()  
   }
 
-  $scope.toggleSelection = function(index,when) {
-    var key = angular.isDefined(when)?daystr(when):daystr(Date.now())
-    if ($scope.selectedBeer[key] === index) {
+  $scope.toggleSelection = function(key) {
+    if ($scope.selectedBeer[key]) {
       delete $scope.selectedBeer[key]
     } else {
-      $scope.selectedBeer[key] = index
+      $scope.selectedBeer[key] = true
     }
   }
 
-  $scope.isBeerSelected = function(index,when) {
-    var key = angular.isDefined(when)?daystr(when):daystr(Date.now())
-    return $scope.selectedBeer[key] === index
+  $scope.isBeerSelected = function(key) {
+    return $scope.selectedBeer[key] === true
   }
 
 
@@ -53,4 +51,30 @@ angular.module('beer').controller('BeersCtrl',['$scope','model',function($scope,
   $scope.sync = function(){
     model.sync().then(setState)
   }
+
+
+  $scope.remove = function(beer){
+    //safety check
+    if (beer.user !== $scope.app.currentUser) {
+      console.log(beer.user,$scope.app.currentUser)
+      return
+    }
+    if (window.cordova) {
+      navigator.notification.confirm('Ta bort?', function(button){
+        if (button === 1) {
+            $scope.$apply(function(){
+              model.remove(beer.user,beer.when).then(setState)
+            })
+        }
+      })
+    } else {
+      if (window.confirm('Ta bort?')) {
+        $scope.$apply(function(){
+          model.delete(beer.user,beer.when).then(setState)
+        })
+      }
+    }
+  }
+
+
 }]) 

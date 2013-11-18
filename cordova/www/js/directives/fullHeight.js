@@ -1,7 +1,8 @@
 angular.module('beer').directive('fullHeight', function() {    
   
   return function(scope, element) {
-    element.css('min-height',document.documentElement.clientHeight+'px');
+    var header = document.getElementById('header')
+    element.css('min-height',(document.documentElement.clientHeight-header.clientHeight)+'px');
   };
 
 })

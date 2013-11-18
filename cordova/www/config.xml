@@ -2,13 +2,14 @@
 <widget id="se.burningbroccoli.beer" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Beer</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Vad drack jag igår?
     </description>
-    <author email="dev@callback.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="david.lgj@gmail.com" href="http://burningbroccoli.se">
+        David Jensen
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <preference name="fullscreen" value="true" />
+    <preference name="fullscreen" value="false" />
     <preference name="webviewbounce" value="true" />
+    <preference name="Orientation" value="portrait" />
 </widget>
