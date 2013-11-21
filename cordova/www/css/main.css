@@ -29,7 +29,6 @@ html {
   width: 100%;
   color: white;
   background-color: #333333;
-  z-index: 20;
   text-transform: uppercase;
   box-shadow: 0 0 3px 3px #222222;
   -webkit-transform: translate3d(0px, 0px, 0px);
@@ -52,14 +51,7 @@ html {
   margin-top: 50px;
   min-height: 100%;
   width: 100%;
-  -webkit-transform: translate3d(0px, 0px, 0px);
-  transform: translate3d(0px, 0px, 0px);
   background-color: #465059;
-}
-
-#mainview.menuopen {
-  -webkit-transform: translate3d(300px, 0px, 0px);
-  transform: translate3d(300px, 0px, 0px);
 }
 
 #mainview.loading {
@@ -84,7 +76,7 @@ html {
 }
 
 #menu ul {
-  margin-top: 10px;
+  margin-top: 40px;
   list-style: none;
 }
 
