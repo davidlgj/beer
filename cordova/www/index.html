@@ -31,7 +31,7 @@
 </body>
 </head>
 <body ng-controller="BeerCtrl">
-    <div id="menu">
+    <div id="menu" ng-class="{ menuopen: app.menuState }" class="enable-transition-all">
         <ul>
             <li ng-click="page('beers')">Dina öl</li>
             <li ng-click="page('tonight')">Allas</li>
@@ -39,11 +39,11 @@
             <li ng-click="page('user')" >Byt användare</li>
         </ul>
     </div>
-    <div id="header" ng-class="{ menuopen: app.menuState }" class="enable-transition-all">
-        <img ng-click="toggleMenu()" src="img/menu.png" /> 
+    <div id="header" ng-click="toggleMenu()" >
+        <img src="img/menu.png" /> 
         <span>{{ app.title }}</span>
     </div>
-    <div id="mainview" ng-class="{ menuopen: app.menuState }" class="enable-transition-all"> 
+    <div id="mainview" ng-class="{ loading: app.loading }"> 
         <div ng-view>
         </div>
     </div>

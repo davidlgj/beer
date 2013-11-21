@@ -4,6 +4,7 @@ angular.module('beer').controller('UserCtrl',['$scope','$location','backend',fun
 
   $scope.app.title = 'Användarnamn'
   $scope.users = []
+  $scope.app.loading = false
 
   var updateList = function(){
     backend.users().then(function(users){

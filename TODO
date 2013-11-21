@@ -27,6 +27,7 @@ Value is a json object which is either a whole object or a diff.
     "where": "Ölrepubliken"
     "name": "Bedarö Bitter",
     "brewery": "Nynäshamn",
+    "type": "IPA",
     "rating": 5,
     "comment": "240 characters of anger or bliss"
 }

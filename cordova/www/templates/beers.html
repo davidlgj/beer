@@ -8,7 +8,7 @@
                 <div class="name">{{ beer.name }}</div>
                 <div class="brewery">{{ beer.brewery }}</div>
                 <rating value="beer.rating" read-only></rating>
-                <div ng-show="isBeerSelected($index)" class="comment animate-show">
+                <div class="comment animate-show">
                     <p>{{ beer.comment }}</p>
                     <!-- <button ng-click="delete(beer)">TA BORT</button> --> 
                     <div class="place">{{ beer.where }} <span>{{ beer.when | date:'H:mm' }}</span></div>
@@ -29,7 +29,7 @@
                 <div class="name">{{ beer.name }}</div>
                 <div class="brewery">{{ beer.brewery }}</div>
                 <rating value="beer.rating" read-only></rating>
-                <div ng-show="isBeerSelected(beer.when)" class="comment animate-show">
+                <div class="comment animate-show">
                     <p>{{ beer.comment }}</p>
                     <!-- <button ng-click="delete(beer)">TA BORT</button> --> 
                     <div class="place">{{ beer.where }} <span>{{ beer.when | date:'H:mm' }}</span></div>

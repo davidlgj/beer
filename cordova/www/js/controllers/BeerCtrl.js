@@ -7,7 +7,8 @@ function($scope,  $location,  $rootScope){
   $scope.app = {
     menuState: false,
     currentUser: null,
-    title: ''
+    title: '',
+    loading: false
   }
   
   //check if we're been here before
@@ -29,6 +30,7 @@ function($scope,  $location,  $rootScope){
   //since we use the touch support in angular we cant simply use links
   //as we ordinary would. That would incur the "slow" link click penalty
   $scope.page = function(pth) {
+    $scope.app.loading = true
     if (pth.indexOf('/') === -1) {
         pth = '/'+pth
     }

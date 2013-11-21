@@ -5,32 +5,10 @@ angular.module('beer').controller('BeersCtrl',['$scope','model',function($scope,
 
   $scope.app.title = 'Öl - '+$scope.app.currentUser
 
-  $scope.selectedBeer = { }  
-  
   console.log('Beeeeeeeer')
 
-
-  //TODO: refactor to dry this up
-  var daystr = function(when) {
-    var date = new Date(when)
-    return date.getFullYear()+'-'+date.getMonth()+'-'+date.getDate()  
-  }
-
-  $scope.toggleSelection = function(key) {
-    if ($scope.selectedBeer[key]) {
-      delete $scope.selectedBeer[key]
-    } else {
-      $scope.selectedBeer[key] = true
-    }
-  }
-
-  $scope.isBeerSelected = function(key) {
-    return $scope.selectedBeer[key] === true
-  }
-
-
   var setState = function(){
-    
+    $scope.app.loading = false
     if ($scope.app.currentUser && $scope.app.currentUser !== "") {
       var days = model.days($scope.app.currentUser)
       console.log('days',days)

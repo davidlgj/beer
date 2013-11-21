@@ -54,8 +54,10 @@ angular.module('beer').factory('model',['backend',function(backend){
     names: function(){
       var names = {}
       var brewers = {}
+      var types = {}
       var places = {} 
       var beerToBrewery = {}
+      var beerToType = {}
 
       angular.forEach(model.beers,function(beer){
         names[beer.name] = true
@@ -65,6 +67,10 @@ angular.module('beer').factory('model',['backend',function(backend){
         if (beer.brewery) {
             brewers[beer.brewery] = true
             beerToBrewery[beer.name] = beer.brewery
+        }
+        if (beer.type) {
+            types[beer.type] = true
+            beerToType[beer.name] = beer.type
         }
       })
       
@@ -77,11 +83,16 @@ angular.module('beer').factory('model',['backend',function(backend){
       var where = []
       angular.forEach(places,function(v,k){ where.push(k) })      
 
+      var typeslst = []
+      angular.forEach(types,function(v,k){ typeslst.push(k) })          
+
       return {
         beers: beers,
         brewers: brews,
         places: where,
-        beerToBrewery: beerToBrewery
+        beerToBrewery: beerToBrewery,
+        beerToType: beerToType,
+        types: typeslst
       }
     },
     days: function(user){
@@ -114,12 +125,13 @@ angular.module('beer').factory('model',['backend',function(backend){
 
       return sorted
     },
-    add: function(user,name,brewery,where,comment,rating) {
+    add: function(user,name,brewery,type,where,comment,rating) {
        return backend.add({
           user: user,
           when: Date.now(),
           where: where,
           name: name,
+          type: type,
           brewery: brewery,
           comment: comment || '',
           rating: rating
